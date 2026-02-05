@@ -3,10 +3,10 @@ FERMam: A Lightweight Dual-Source and Multi-Scale Fusion Framework for Facial Ex
 
 The purpose of this repository is to support research transparency and reproducibility by releasing the complete source code, training and evaluation scripts, and detailed usage instructions.
 
----
+
 
 ## 1. Repository Structure
-
+```
 FERMam-main/
 ├── checkpoint/ # Checkpoint directory (empty by default)
 │ └── save_vkp_here
@@ -40,20 +40,20 @@ FERMam-main/
 ├── test_affect.py # Evaluation script (AffectNet)
 ├── utils.py # Utility functions
 └── README.md
+```
 
----
 
 > **Note:**  
 > Due to dataset license restrictions, the raw datasets are **not included** in this repository.
 
----
+
 
 ## 2. Environment Setup
 
 ### 2.1 Tested Environment
 
 The code has been tested under the following environment:
-
+```
 - Python ≥ 3.8  
 - **PyTorch 2.3**
 - **CUDA 11.8**
@@ -62,49 +62,52 @@ The code has been tested under the following environment:
 - opencv-python  
 - tqdm  
 - einops  
-
+```
 ### 2.2 Installation
 
 Install dependencies via:
 
-```bash
 pip install -r requirements.txt
 
 ---
 
-3. Datasets
+## 3. Datasets
 
 FERMam is evaluated on three widely used FER benchmarks.
 
-3.1 RAF-DB
-
+### 3.1 RAF-DB
+```
 Official website: http://www.whdeng.cn/RAF/model1.html
 
 Use the basic expression subset
 
 Follow the official train/test split
-
-3.2 AffectNet
-
+```
+### 3.2 AffectNet
+```
 Official website: http://mohammadmahoor.com/affectnet/
 
 Use the 7-class or 8-class setting as described in the paper
-
-3.3 FERPlus
-
+```
+### 3.3 FERPlus
+```
 Official repository: https://github.com/Microsoft/FERPlus
 
 Follow the official labels and splits
-
+```
 ---
 
-4. Training
+## 4. Training
 
-4.1 Training on RAF-DB
+### 4.1 Training on RAF-DB
+```
 python train.py
-
-4.2 Training on AffectNet
+```
+### 4.2 Training on AffectNet
+```
 python train_affect.py
-
-4.3 Training on FERPlus
+```
+### 4.3 Training on FERPlus
+```
 python train_FERPlus.py
+```
